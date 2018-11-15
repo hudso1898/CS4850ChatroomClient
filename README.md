@@ -2,17 +2,25 @@
 Client program for CS4850 Lab 3 Version 2 (BONUS)
 
 This program implements the client side of the CS4850 Lab 3 Version 2 (BONUS).
-An executable .jar file can be found in dist/.
+An executable .jar file can be found in dist.
 Usage: $ java -jar Mrh4hdChatroomClient.jar
 
 Available commands:
+
    <== Commands ==>                 <== Function ==>
+   
 login <username> <password>   - login to the server
+   
 send all <message>            - send a message to all users
+   
 send <username> <message>     - whisper a message to another user
+   
 who                           - list all users on the server
+
 newuser <username> <password> - create a new user account
+   
 logout                        - logout and exit the program
+
 help                          - displays this menu.
 
 The program will attempt to connect to the server program on the localhost (127.0.0.1).
