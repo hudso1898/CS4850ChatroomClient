@@ -102,7 +102,11 @@ public class ChatroomClient {
                     case "newuser":
                         username = scanner.next();
                         password = scanner.next();
-                        out.writeUTF("newuser" + " " + username + " " + password);
+                        if ((username.length() < 32) && ((password.length() >= 4) && (password.length() <= 8)))
+                            out.writeUTF("newuser" + " " + username + " " + password);
+                        else System.out.println(ANSI_RED + "Error: username or password invalid.\n"
+                                + "Username should be less than 32 characters and password between 4 and 8 characters."
+                                + ANSI_RESET);
                         break;
                     // who implementation
                     case "who":
